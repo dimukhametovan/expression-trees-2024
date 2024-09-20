@@ -15,7 +15,8 @@ expr: string.o list.o lexer.o parser.o transform.o main.o
 	$(CC) -o $@ $(CFLAGS) -c $^
 
 clean:
-	rm expr
 	rm *.o
+
+rebuild: clean all
 
 .PHONY: all clean
